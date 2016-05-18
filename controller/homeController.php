@@ -20,16 +20,36 @@ switch ( $route->getAction() ) {
       }
       break;
 
-    case 'home':
+    case 'table':
+        $dbObj = new db();
+
+        $sql = "SELECT * FROM players";
+        $dbObj->dbPrepare($sql);
+        $dbObj->dbExecute([]);
+
+
         include( APP_VIEW .'/home/homeSubNav.php' );
-        include( APP_VIEW .'/home/homeView.php' );
-    break;
+        include( APP_VIEW .'/home/tableView.php' );
+        break;
 
 
     default:
+        $dbObj = new db();
+
+        $sql = "SELECT * FROM app_user";
+        $dbObj->dbPrepare($sql);
+        $dbObj->dbExecute([]);
+        $row = $dbObj->dbFetch("assoc");
+
+
+        print '<pre>';
+        print_r($row);
+        print '</pre>';
+
         include( APP_VIEW .'/home/homeSubNav.php' );
         include( APP_VIEW .'/home/homeView.php' );
-        break;
+  break;
+
 }
 
 
