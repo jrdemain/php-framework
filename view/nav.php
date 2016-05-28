@@ -14,20 +14,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<?php print APP_DOC_ROOT . '/home'; ?>">Home</a></li>
-            <li><a href="<?php print APP_DOC_ROOT . '/blog'; ?>">Blog</a></li>
-            <li><a href="#">Menu 3</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 4 <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
+            <li><a href="<?php print APP_DOC_ROOT . '/stats'; ?>">Stats</a></li>
           </ul>
 
 <?php if ( 0 !== APP_AUTH_TYPE && isset($_SESSION["username"]) ) { ?>

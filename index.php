@@ -38,6 +38,10 @@ switch ( $route->getController() ) {
         include( APP_CONTROLLER . '/homeController.php');
         break;
 
+    case 'stats':
+        include( APP_CONTROLLER . '/statsController.php');
+        break;
+        
     default:
         include( APP_CONTROLLER . '/homeController.php');
         break;
