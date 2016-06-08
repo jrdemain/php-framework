@@ -14,7 +14,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<?php print APP_DOC_ROOT . '/home'; ?>">Home</a></li>
-            <li><a href="<?php print APP_DOC_ROOT . '/stats/list'; ?>">Stats</a></li>
+            <li><a href="<?php print APP_DOC_ROOT . '/stats/default'; ?>">Stats</a></li>
           </ul>
 
 <?php if ( 0 !== APP_AUTH_TYPE && isset($_SESSION["username"]) ) { ?>

@@ -189,7 +189,7 @@ switch ( $route->getAction() ) {
         $dbObj->dbExecute([]);
 
         include( APP_VIEW .'/stats/statsSubNav.php' );
-        include( APP_VIEW .'/stats/statsListView.php' );
+        include( APP_VIEW .'/stats/statsDefaultView.php' );
         break;
 
 }
