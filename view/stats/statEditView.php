@@ -32,9 +32,10 @@
                   <input type="text" class="form-control" id="statValue" name="statValue" placeholder="Stat" value="<?php print $stat['stat_value']; ?>">
                 </div>
               </div>
-              <button type="submit" name="submit" class="btn btn-primary">Update</button>
+              <button type="submit" name="submit" onclick="doit();" class="btn btn-primary">Update</button>
             </form>
 
           </div>
         </div>
+
         <!-- end page content -->

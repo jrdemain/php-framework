@@ -8,6 +8,34 @@ include( APP_VIEW . '/header.php' );
 include( APP_VIEW . '/nav.php' );
 
 switch ( $route->getAction() ) {
+  case 'addStat':
+
+      include( APP_VIEW .'/stats/statsSubNav.php' );
+      include( APP_VIEW .'/stats/addStatView.php' );
+      break;
+  case 'newStat':
+
+      if (isset($_POST['submit']))
+      {
+        $dbObj = new db();
+
+        $sql = "INSERT INTO player_game_stats (game_id, player_id, stat_id, stat_value) VALUES (?, ?, ?, ?)";
+        $dbObj->dbPrepare($sql);
+        $dbObj->dbExecute([
+         $_POST['game_id'],
+         $_POST['player_id'],
+         $_POST['stat_id'],
+         $_POST['stat_value']
+
+        ]);
+
+
+        include( APP_VIEW .'/stats/statsSubNav.php' );
+        include( APP_VIEW .'/stats/addStatView.php' );
+
+      }
+
+      break;
 
 
   case 'edit':

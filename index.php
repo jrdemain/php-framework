@@ -30,6 +30,10 @@ switch ( $route->getController() ) {
         include( APP_CONTROLLER . '/authController.php');
         break;
 
+    case 'create':
+        include( APP_CONTROLLER . '/createController.php');
+        break;
+
     case 'blog':
         include( APP_CONTROLLER . '/blogController.php');
         break;
@@ -38,10 +42,14 @@ switch ( $route->getController() ) {
         include( APP_CONTROLLER . '/homeController.php');
         break;
 
+    case 'stat':
+        include( APP_CONTROLLER . '/statsController.php');
+        break;
+
     case 'stats':
         include( APP_CONTROLLER . '/statsController.php');
         break;
-        
+
     default:
         include( APP_CONTROLLER . '/homeController.php');
         break;

@@ -20,6 +20,35 @@ switch ( $route->getAction() ) {
       }
       break;
 
+      case 'create':
+
+          include( APP_VIEW .'/create/createSubNav.php' );
+          include( APP_VIEW .'/create/createView.php' );
+          break;
+
+      case 'newPlayer':
+
+          if (isset($_POST['submit']))
+          {
+            $dbObj = new db();
+
+            $sql = "INSERT INTO players (jersey_num, player_name, bat_hand, throw_hand) VALUES (?, ?, ?, ?)";
+            $dbObj->dbPrepare($sql);
+            $dbObj->dbExecute([
+             $_POST['jersey_num'],
+             $_POST['player_name'],
+             $_POST['bat_hand'],
+             $_POST['throw_hand']
+
+            ]);
+
+
+          include( APP_VIEW .'/create/createSubNav.php' );
+          include( APP_VIEW .'/create/createView.php' );
+          }
+
+          break;
+
     case 'table':
         $dbObj = new db();
 
@@ -42,9 +71,9 @@ switch ( $route->getAction() ) {
         $row = $dbObj->dbFetch("assoc");
 
 
-        print '<pre>';
-        print_r($row);
-        print '</pre>';
+      #  print '<pre>';
+      #  print_r($row);
+      #  print '</pre>';
 
         include( APP_VIEW .'/home/homeSubNav.php' );
         include( APP_VIEW .'/home/homeView.php' );
