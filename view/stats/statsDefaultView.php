@@ -24,7 +24,7 @@
         <tr>
       <!--    <td>
            <a class="btn btn-default btn-xs" href="<?php print APP_DOC_ROOT . '/stats/view/' . $stats['pgs_id']; ?>">View</a>
-            <a class="btn btn-default btn-xs" href="<?php print APP_DOC_ROOT . '/stats/edit/' . $stats['pgs_id']; ?>">Edit</a> 
+            <a class="btn btn-default btn-xs" href="<?php print APP_DOC_ROOT . '/stats/edit/' . $stats['pgs_id']; ?>">Edit</a>
           </td> -->
           <td>
             <a
@@ -34,7 +34,7 @@
               data-placement="bottom"
               data-trigger="hover"
               title="Game ID#"
-              data-content="<?php print $stats['game_id']; ?>"
+              data-content="Game #: <?php print $stats['game_id']; ?> . Away: <?php print $stats['away_score']; ?> . Home: <?php print $stats['home_score']; ?>"
               href="#"
               tabindex="0">
                 <?php print $stats['game_date']; ?>

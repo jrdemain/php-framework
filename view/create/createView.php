@@ -5,7 +5,7 @@
            <form method="post" action="<?php print APP_DOC_ROOT . '/home/newPlayer'; ?>">
             <div class="form-group">
               <label for="">Jersey Number</label>
-              <input type="text" class="form-control" id="jersey_num" name = "jersey_num" placeholder="Enter a number 1 to 100">
+              <input type="text" class="form-control" id="jersey_num" name = "jersey_num" placeholder="Enter the player's jersey number">
             </div><div class="form-group">
               <label for="">Player Name</label>
               <input type="text" class="form-control" id="player_name" name = "player_name" placeholder="Enter the players first name">

@@ -33,8 +33,8 @@
               data-toggle="popover"
               data-placement="bottom"
               data-trigger="hover"
-              title="Game ID#"
-              data-content="<?php print $stats['game_id']; ?>"
+              title="Game Details"
+              data-content="Game #: <?php print $stats['game_id']; ?> . Away: <?php print $stats['away_score']; ?> . Home: <?php print $stats['home_score']; ?>"
               href="#"
               tabindex="0">
                 <?php print $stats['game_date']; ?>
@@ -48,7 +48,7 @@
               data-placement="bottom"
               data-trigger="hover"
               title="Player Details"
-              data-content="Jersey Number: <?php print $stats['jersey_num']; ?> . Player ID: <?php print $stats['player_id']; ?>" 
+              data-content="Jersey Number: <?php print $stats['jersey_num']; ?> . Player ID: <?php print $stats['player_id']; ?>"
               href="#"
               tabindex="0">
                 <?php print $stats['player_name'];  ?>

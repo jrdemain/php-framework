@@ -13,6 +13,7 @@ switch ( $route->getAction() ) {
       include( APP_VIEW .'/stats/statsSubNav.php' );
       include( APP_VIEW .'/stats/addStatView.php' );
       break;
+
   case 'newStat':
 
       if (isset($_POST['submit']))
